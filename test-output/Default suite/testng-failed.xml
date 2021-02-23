@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TalentozPackage.Applogs">
+      <class name="TalentozPackage.test">
         <methods>
+          <include name="login"/>
+          <include name="test1"/>
+          <include name="closeApp"/>
           <include name="setUp"/>
-          <include name="testMethod"/>
         </methods>
-      </class> <!-- TalentozPackage.Applogs -->
+      </class> <!-- TalentozPackage.test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -137,19 +137,23 @@ public class Applogs {
 	    LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
 	  
     	 String errormsg = "";
-    	 
+    	// int PassedSettings = 0;
+    	 ///int FailedSettings = 0;
     	 for (LogEntry logEntry: logEntries) 
     	 {
     		 errormsg = "error";
              System.out.println("Found error in logs: " + logEntry.getMessage() );
+             //FailedSettings = FailedSettings+1;
             // System.setProperty(logEntry.getMessage(),"./Chromelog.txt");
          }
     	 if(errormsg=="") {
     		 System.out.println("No error found!");
-    		 
+    		 //PassedSettings = PassedSettings+1;
     	 }
-    	
-    	
+    	 
+    	//System.out.println("Total Settings Count:" + PassedSettings + FailedSettings);
+    	//System.out.println("PassedSettings:" + PassedSettings);
+    	//System.out.println("FailedSettings:" + FailedSettings);
     	
     }
     
